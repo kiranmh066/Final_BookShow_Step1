@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MovieCoreMvcUI</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="UserHome" asp-action="Index">User MovieCoreMvcUI</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" asp-area="" asp-controller="UserHome" asp-action="Index"><span class="btn badge-pill badge-secondary">Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="ShowMovies"><span class="btn badge-pill badge-secondary">Movie</span></a>
+                        </li>                      
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="ShowBooks"><span class="btn badge-pill badge-secondary">Book Ticket</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Bill" asp-action="Index"><span class="btn badge-pill badge-secondary">Bill</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-danger" style="color:red; outline:solid" asp-area="" asp-controller="Profile" asp-action="Index"><span class="btn badge-pill badge-secondary">Profile</span></a>
+                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        @*<li class="nav-item">
+                            <a class="nav-link text-success" asp-area="" asp-controller="Theatre" asp-action="ShowTheatres"><span class="badge badge-pill badge-secondary">Theatre</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Show" asp-action="ShowShows"><span class="badge badge-success badge-secondary">Show Timing</span></a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="ShowBooks"><span class="btn-info badge-success badge-secondary">Book Ticket</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Bill" asp-action="ShowBiils"><span class="badge badge-pill badge-dark">Bill</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" style="color:red; outline:solid" asp-area="" asp-controller="SignOut" asp-action="ShowUser">Sign Out</a>
+                        </li>*@
+                    </ul>
+
+                </div>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" style="color:blue;background-color:burlywood" type="button" data-toggle="dropdown" aria-expanded="false">
+                        Follow on
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Twitter</a>
+                        <a class="dropdown-item" href="#">Instagram</a>
+                        <a class="dropdown-item" href="#">Face Book</a>
+                        <a class="dropdown-item" href="#">Linked in</a>
+                        <a class="dropdown-item" href="#">Youtube</a>
+                        <a class="dropdown-item" href="#">Pin Interest</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

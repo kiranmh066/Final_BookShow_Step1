@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+@model IEnumerable<BookShowEntity.BookTicket>;
+<div class="row">
+    <div class="col-12">
+        <h3>View and Pay</h3>
+        <hr />
+        <table class="table table-light table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Show Id</th>  
+                    <th>User Id</th>
+                    <th>UserName</th>
+                    <th>UserEmail</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Pay Now</th>
+                    <th>Generate Bill</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.ShowId</td>
+                        <td>@item.UserId</td>
+                        <td>@item.User.Name</td>
+                        <td>@item.User.Email</td>
+                        <td>@item.Quantity</td>
+                        <td>@item.Quantity*100</td>
+                        <td><a asp-controller="Bill" asp-action="PhonePe" asp-route-movieID="@item.Id">Click To Pay</a></td>                        
+                        <td><a asp-controller="Bill" asp-action="ShowBill" asp-route-movieID="@item.Id">View Bill</a></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
